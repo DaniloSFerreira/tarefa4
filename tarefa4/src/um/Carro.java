@@ -160,9 +160,5 @@ public class Carro {
 
 
 
-	public void imprimeValores() {
-		System.out.println("A quantidade de pneus é: " + getQuantidadePneus());
-		System.out.println("A quantidade de calotas é: " + getQuantidadeCalotas());
-		System.out.println("A quantidade de parafusos é: " + getQuantidadeParafusosPneu());
-	}
+	
 }
