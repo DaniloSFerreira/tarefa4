@@ -13,6 +13,12 @@ public class Main {
 		System.out.print("Informe a quantidade de pneus: ");
 		int quantidadePneus = scanner.nextInt();
 		
+		System.out.print("Informe o total de espelhos retrovisores: ");
+		int quantidadeRetrovisor = scanner.nextInt();
+		
+		System.out.print("Informe a quantidade de passageiros protegidos pelo cinto de segurança: ");
+		int cintoSeguranca = scanner.nextInt();
+		
 		System.out.print("Informe a quantidade de calotas: ");
 		int quantidadeCalotas = scanner.nextInt();
 	
@@ -40,10 +46,10 @@ public class Main {
 		String arCondicionado = scanner.next();
 		
 		
-		Carro novoCarro = new Carro();
-		novoCarro.setQuantidadePneus(quantidadePneus);
+		Carro novoCarro = new Carro(quantidadeRetrovisor, quantidadePneus, cintoSeguranca, quantidadeParafusosPneu);
+		
 		novoCarro.setQuantidadeCalotas(quantidadeCalotas);
-		novoCarro.setQuantidadeParafusosPneu(quantidadeParafusosPneu);
+		
 		novoCarro.setQuantidadePortas(quantidadePortas);
 		novoCarro.setCor(cor);
 		novoCarro.setDirecaoHidraulica(direcaoHidraulica);
@@ -53,9 +59,10 @@ public class Main {
 		novoCarro.setArCondicionado(arCondicionado);
 		
 		System.out.println("Carro montado com sucesso!");
-		System.out.println("Quantidade de pneus: " + novoCarro.getQuantidadePneus());
+		System.out.println("Seu carro possui " + novoCarro.getQuantidadePneus() + " pneus e " + novoCarro.getQuantidadeParafusosPneu() + " parafusos para rodas");
 		System.out.println("Quantidade de calotas: " + novoCarro.getQuantidadeCalotas());
-		System.out.println("Quantidade de parafusos: " + novoCarro.getQuantidadeParafusosPneu());
+		System.out.println("O carro possui cinto de segurança para " + novoCarro.getCintoSeguranca() + " pessoas.");
+		System.out.println("O carro possui " + novoCarro.getQuantidadeRetrovisor() + " retrovisores");
 		System.out.println("Quantidade de portas: " + novoCarro.getQuantidadePortas());
 		System.out.println("A cor do carro é: " + novoCarro.getCor());
 		System.out.println("Direção hidráulica: " + novoCarro.getDirecaoHidraulica());
