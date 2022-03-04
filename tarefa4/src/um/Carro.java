@@ -20,7 +20,7 @@ public class Carro {
 		this.quantidadeRetrovisor = quantidadeRetrovisor;
 		this.quantidadePneus = quantidadePneus;
 		this.cintoSeguranca = cintoSeguranca;
-		this.quantidadeParafusosPneu = (quantidadePneus - 1) * 4;
+		this.quantidadeParafusosPneu = quantidadePneus * 4;
 	}
 
 	public int getQuantidadeRetrovisor() {
